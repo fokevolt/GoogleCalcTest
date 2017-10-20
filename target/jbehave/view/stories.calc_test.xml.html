@@ -1,0 +1,94 @@
+<html>
+<head>
+<title>stories.calc_test</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="stories/calc_test.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="As a">mathematician</inOrderTo>
+  <asA keyword="I want to">perform some math calculations</asA>
+  <iWantTo keyword="So that">I can get right answers</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="calculator calculations">
+<examples keyword="Examples:">
+<step>Given a calculator</step>
+<step>When do calculations &lt;number_1&gt; &lt;operation&gt; &lt;number_2&gt;</step>
+<step>Then the answer is &lt;result&gt;</step>
+<parameters>
+<names><name>number_1</name><name>operation</name><name>number_2</name><name>result</name></names>
+<values><value>3</value><value>+</value><value>2</value><value>5</value></values>
+<values><value>9</value><value>-</value><value>6</value><value>3</value></values>
+<values><value>18</value><value>/</value><value>3</value><value>6</value></values>
+<values><value>5</value><value>*</value><value>3</value><value>15</value></values>
+<values><value>3</value><value>/</value><value>0</value><value>Infinity</value></values>
+<values><value>0</value><value>/</value><value>0</value><value>Error</value></values>
+<values><value>-10</value><value>+</value><value>10</value><value>0</value></values>
+</parameters>
+
+<example keyword="Example:">{number_1=3, operation=+, number_2=2, result=5}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>3</parameter> <parameter>+</parameter> <parameter>2</parameter></step>
+<step outcome="successful">Then the answer is <parameter>5</parameter></step>
+
+<example keyword="Example:">{number_1=9, operation=-, number_2=6, result=3}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>9</parameter> <parameter>-</parameter> <parameter>6</parameter></step>
+<step outcome="successful">Then the answer is <parameter>3</parameter></step>
+
+<example keyword="Example:">{number_1=18, operation=/, number_2=3, result=6}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>18</parameter> <parameter>/</parameter> <parameter>3</parameter></step>
+<step outcome="successful">Then the answer is <parameter>6</parameter></step>
+
+<example keyword="Example:">{number_1=5, operation=*, number_2=3, result=15}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>5</parameter> <parameter>*</parameter> <parameter>3</parameter></step>
+<step outcome="successful">Then the answer is <parameter>15</parameter></step>
+
+<example keyword="Example:">{number_1=3, operation=/, number_2=0, result=Infinity}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>3</parameter> <parameter>/</parameter> <parameter>0</parameter></step>
+<step outcome="successful">Then the answer is <parameter>Infinity</parameter></step>
+
+<example keyword="Example:">{number_1=0, operation=/, number_2=0, result=Error}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>0</parameter> <parameter>/</parameter> <parameter>0</parameter></step>
+<step outcome="successful">Then the answer is <parameter>Error</parameter></step>
+
+<example keyword="Example:">{number_1=-10, operation=+, number_2=10, result=0}</example>
+<step outcome="successful">Given a calculator</step>
+<step outcome="successful">When do calculations <parameter>-10</parameter> <parameter>+</parameter> <parameter>10</parameter></step>
+<step outcome="successful">Then the answer is <parameter>0</parameter></step>
+</examples>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>

@@ -1,0 +1,4756 @@
+{"xref": {
+  "stories": [
+    {
+      "story": {
+        "path": "stories/calc_test.story",
+        "description": {
+          "descriptionAsString": ""
+        },
+        "narrative": {
+          "inOrderTo": "",
+          "asA": "mathematician",
+          "iWantTo": "perform some math calculations",
+          "soThat": "I can get right answers"
+        },
+        "meta": {
+          "properties": []
+        },
+        "givenStories": {
+          "givenStories": [],
+          "givenStoriesAsString": "",
+          "examplesTable": {
+            "tableAsString": "",
+            "tableTransformers": {
+              "transformers": [
+                [
+                  "FORMATTING",
+                  {}
+                ],
+                [
+                  "REPLACING",
+                  {}
+                ],
+                [
+                  "FROM_LANDSCAPE",
+                  {}
+                ]
+              ]
+            },
+            "headers": [],
+            "data": [],
+            "properties": {
+              "properties": [
+                {
+                  "@name": "headerSeparator",
+                  "@value": "|"
+                },
+                {
+                  "@name": "valueSeparator",
+                  "@value": "|"
+                },
+                {
+                  "@name": "ignorableSeparator",
+                  "@value": "|--"
+                }
+              ]
+            },
+            "propertiesAsString": "",
+            "namedParameters": []
+          }
+        },
+        "lifecycle": {
+          "before": {
+            "steps": [
+              []
+            ]
+          },
+          "after": []
+        },
+        "scenarios": [
+          {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        ],
+        "name": "calc_test.story"
+      },
+      "localizedNarrative": "As a mathematician\nI want to perform some math calculations\nSo that I can get right answers",
+      "allowed": true,
+      "status": "SUCCESSFUL",
+      "givenStories": [],
+      "scenarios": [
+        {
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          },
+          "storyPath": "stories/calc_test.story",
+          "allowed": true,
+          "examplePerformableScenarios": [
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "3"
+                ],
+                [
+                  "operation",
+                  "+"
+                ],
+                [
+                  "number_2",
+                  "2"
+                ],
+                [
+                  "result",
+                  "5"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 31,
+                    "start": 1508503304468,
+                    "end": 1508503304499
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟3｠ ｟+｠ ｟2｠",
+                    "durationInMillis": 341,
+                    "start": 1508503304499,
+                    "end": 1508503304840
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟5｠",
+                    "durationInMillis": 46,
+                    "start": 1508503304841,
+                    "end": 1508503304887
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "9"
+                ],
+                [
+                  "operation",
+                  "-"
+                ],
+                [
+                  "number_2",
+                  "6"
+                ],
+                [
+                  "result",
+                  "3"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 10,
+                    "start": 1508503304890,
+                    "end": 1508503304900
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟9｠ ｟-｠ ｟6｠",
+                    "durationInMillis": 346,
+                    "start": 1508503304901,
+                    "end": 1508503305247
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟3｠",
+                    "durationInMillis": 19,
+                    "start": 1508503305248,
+                    "end": 1508503305267
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "18"
+                ],
+                [
+                  "operation",
+                  "/"
+                ],
+                [
+                  "number_2",
+                  "3"
+                ],
+                [
+                  "result",
+                  "6"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 8,
+                    "start": 1508503305269,
+                    "end": 1508503305277
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟18｠ ｟/｠ ｟3｠",
+                    "durationInMillis": 394,
+                    "start": 1508503305278,
+                    "end": 1508503305672
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟6｠",
+                    "durationInMillis": 27,
+                    "start": 1508503305673,
+                    "end": 1508503305700
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "5"
+                ],
+                [
+                  "operation",
+                  "*"
+                ],
+                [
+                  "number_2",
+                  "3"
+                ],
+                [
+                  "result",
+                  "15"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 6,
+                    "start": 1508503305702,
+                    "end": 1508503305708
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟5｠ ｟*｠ ｟3｠",
+                    "durationInMillis": 297,
+                    "start": 1508503305709,
+                    "end": 1508503306006
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟15｠",
+                    "durationInMillis": 19,
+                    "start": 1508503306007,
+                    "end": 1508503306026
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "3"
+                ],
+                [
+                  "operation",
+                  "/"
+                ],
+                [
+                  "number_2",
+                  "0"
+                ],
+                [
+                  "result",
+                  "Infinity"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 6,
+                    "start": 1508503306027,
+                    "end": 1508503306033
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟3｠ ｟/｠ ｟0｠",
+                    "durationInMillis": 306,
+                    "start": 1508503306034,
+                    "end": 1508503306340
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟Infinity｠",
+                    "durationInMillis": 20,
+                    "start": 1508503306341,
+                    "end": 1508503306361
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "0"
+                ],
+                [
+                  "operation",
+                  "/"
+                ],
+                [
+                  "number_2",
+                  "0"
+                ],
+                [
+                  "result",
+                  "Error"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 12,
+                    "start": 1508503306363,
+                    "end": 1508503306375
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟0｠ ｟/｠ ｟0｠",
+                    "durationInMillis": 268,
+                    "start": 1508503306376,
+                    "end": 1508503306644
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟Error｠",
+                    "durationInMillis": 18,
+                    "start": 1508503306645,
+                    "end": 1508503306663
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            },
+            {
+              "parameters": [
+                [
+                  "number_1",
+                  "-10"
+                ],
+                [
+                  "operation",
+                  "+"
+                ],
+                [
+                  "number_2",
+                  "10"
+                ],
+                [
+                  "result",
+                  "0"
+                ]
+              ],
+              "givenStories": [],
+              "beforeSteps": {
+                "matches": []
+              },
+              "steps": {
+                "matches": [],
+                "results": [
+                  {
+                    "step": "Given a calculator",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Given a calculator",
+                    "durationInMillis": 9,
+                    "start": 1508503306664,
+                    "end": 1508503306673
+                  },
+                  {
+                    "step": "When do calculations <number_1> <operation> <number_2>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "When do calculations ｟-10｠ ｟+｠ ｟10｠",
+                    "durationInMillis": 457,
+                    "start": 1508503306673,
+                    "end": 1508503307130
+                  },
+                  {
+                    "step": "Then the answer is <result>",
+                    "type": "SUCCESSFUL",
+                    "parametrisedStep": "Then the answer is ｟0｠",
+                    "durationInMillis": 19,
+                    "start": 1508503307130,
+                    "end": 1508503307149
+                  }
+                ]
+              },
+              "afterSteps": {
+                "matches": []
+              },
+              "storyAndScenarioMeta": {
+                "properties": []
+              },
+              "scenario": {
+                "title": "calculator calculations",
+                "meta": {
+                  "properties": []
+                },
+                "givenStories": {
+                  "givenStories": [],
+                  "givenStoriesAsString": "",
+                  "examplesTable": {
+                    "tableAsString": "",
+                    "tableTransformers": {
+                      "transformers": [
+                        [
+                          "FORMATTING",
+                          {}
+                        ],
+                        [
+                          "REPLACING",
+                          {}
+                        ],
+                        [
+                          "FROM_LANDSCAPE",
+                          {}
+                        ]
+                      ]
+                    },
+                    "headers": [],
+                    "data": [],
+                    "properties": {
+                      "properties": [
+                        {
+                          "@name": "headerSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "valueSeparator",
+                          "@value": "|"
+                        },
+                        {
+                          "@name": "ignorableSeparator",
+                          "@value": "|--"
+                        }
+                      ]
+                    },
+                    "propertiesAsString": "",
+                    "namedParameters": []
+                  }
+                },
+                "examplesTable": {
+                  "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+                  "tableTransformers": {
+                    "transformers": [
+                      [
+                        "FORMATTING",
+                        {}
+                      ],
+                      [
+                        "REPLACING",
+                        {}
+                      ],
+                      [
+                        "FROM_LANDSCAPE",
+                        {}
+                      ]
+                    ]
+                  },
+                  "headers": [
+                    "number_1",
+                    "operation",
+                    "number_2",
+                    "result"
+                  ],
+                  "data": [
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "2"
+                      ],
+                      [
+                        "result",
+                        "5"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "9"
+                      ],
+                      [
+                        "operation",
+                        "-"
+                      ],
+                      [
+                        "number_2",
+                        "6"
+                      ],
+                      [
+                        "result",
+                        "3"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "18"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "6"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "5"
+                      ],
+                      [
+                        "operation",
+                        "*"
+                      ],
+                      [
+                        "number_2",
+                        "3"
+                      ],
+                      [
+                        "result",
+                        "15"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "3"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Infinity"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "0"
+                      ],
+                      [
+                        "operation",
+                        "/"
+                      ],
+                      [
+                        "number_2",
+                        "0"
+                      ],
+                      [
+                        "result",
+                        "Error"
+                      ]
+                    ],
+                    [
+                      [
+                        "number_1",
+                        "-10"
+                      ],
+                      [
+                        "operation",
+                        "+"
+                      ],
+                      [
+                        "number_2",
+                        "10"
+                      ],
+                      [
+                        "result",
+                        "0"
+                      ]
+                    ]
+                  ],
+                  "properties": {
+                    "properties": [
+                      {
+                        "@name": "headerSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "valueSeparator",
+                        "@value": "|"
+                      },
+                      {
+                        "@name": "ignorableSeparator",
+                        "@value": "|--"
+                      }
+                    ]
+                  },
+                  "propertiesAsString": "",
+                  "namedParameters": []
+                },
+                "steps": [
+                  "Given a calculator",
+                  "When do calculations <number_1> <operation> <number_2>",
+                  "Then the answer is <result>"
+                ]
+              }
+            }
+          ],
+          "status": "SUCCESSFUL"
+        }
+      ],
+      "beforeSteps": {},
+      "afterSteps": {},
+      "timing": {
+        "durationInMillis": 2871,
+        "start": 1508503304318,
+        "end": 1508503307189
+      },
+      "givenStory": false
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario": {
+        "title": "calculator calculations",
+        "meta": {
+          "properties": []
+        },
+        "givenStories": {
+          "givenStories": [],
+          "givenStoriesAsString": "",
+          "examplesTable": {
+            "tableAsString": "",
+            "tableTransformers": {
+              "transformers": [
+                [
+                  "FORMATTING",
+                  {}
+                ],
+                [
+                  "REPLACING",
+                  {}
+                ],
+                [
+                  "FROM_LANDSCAPE",
+                  {}
+                ]
+              ]
+            },
+            "headers": [],
+            "data": [],
+            "properties": {
+              "properties": [
+                {
+                  "@name": "headerSeparator",
+                  "@value": "|"
+                },
+                {
+                  "@name": "valueSeparator",
+                  "@value": "|"
+                },
+                {
+                  "@name": "ignorableSeparator",
+                  "@value": "|--"
+                }
+              ]
+            },
+            "propertiesAsString": "",
+            "namedParameters": []
+          }
+        },
+        "examplesTable": {
+          "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+          "tableTransformers": {
+            "transformers": [
+              [
+                "FORMATTING",
+                {}
+              ],
+              [
+                "REPLACING",
+                {}
+              ],
+              [
+                "FROM_LANDSCAPE",
+                {}
+              ]
+            ]
+          },
+          "headers": [
+            "number_1",
+            "operation",
+            "number_2",
+            "result"
+          ],
+          "data": [
+            [
+              [
+                "number_1",
+                "3"
+              ],
+              [
+                "operation",
+                "+"
+              ],
+              [
+                "number_2",
+                "2"
+              ],
+              [
+                "result",
+                "5"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "9"
+              ],
+              [
+                "operation",
+                "-"
+              ],
+              [
+                "number_2",
+                "6"
+              ],
+              [
+                "result",
+                "3"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "18"
+              ],
+              [
+                "operation",
+                "/"
+              ],
+              [
+                "number_2",
+                "3"
+              ],
+              [
+                "result",
+                "6"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "5"
+              ],
+              [
+                "operation",
+                "*"
+              ],
+              [
+                "number_2",
+                "3"
+              ],
+              [
+                "result",
+                "15"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "3"
+              ],
+              [
+                "operation",
+                "/"
+              ],
+              [
+                "number_2",
+                "0"
+              ],
+              [
+                "result",
+                "Infinity"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "0"
+              ],
+              [
+                "operation",
+                "/"
+              ],
+              [
+                "number_2",
+                "0"
+              ],
+              [
+                "result",
+                "Error"
+              ]
+            ],
+            [
+              [
+                "number_1",
+                "-10"
+              ],
+              [
+                "operation",
+                "+"
+              ],
+              [
+                "number_2",
+                "10"
+              ],
+              [
+                "result",
+                "0"
+              ]
+            ]
+          ],
+          "properties": {
+            "properties": [
+              {
+                "@name": "headerSeparator",
+                "@value": "|"
+              },
+              {
+                "@name": "valueSeparator",
+                "@value": "|"
+              },
+              {
+                "@name": "ignorableSeparator",
+                "@value": "|--"
+              }
+            ]
+          },
+          "propertiesAsString": "",
+          "namedParameters": []
+        },
+        "steps": [
+          "Given a calculator",
+          "When do calculations <number_1> <operation> <number_2>",
+          "Then the answer is <result>"
+        ]
+      },
+      "storyPath": "stories/calc_test.story",
+      "allowed": true,
+      "examplePerformableScenarios": [
+        {
+          "parameters": [
+            [
+              "number_1",
+              "3"
+            ],
+            [
+              "operation",
+              "+"
+            ],
+            [
+              "number_2",
+              "2"
+            ],
+            [
+              "result",
+              "5"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 31,
+                "start": 1508503304468,
+                "end": 1508503304499
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟3｠ ｟+｠ ｟2｠",
+                "durationInMillis": 341,
+                "start": 1508503304499,
+                "end": 1508503304840
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟5｠",
+                "durationInMillis": 46,
+                "start": 1508503304841,
+                "end": 1508503304887
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "9"
+            ],
+            [
+              "operation",
+              "-"
+            ],
+            [
+              "number_2",
+              "6"
+            ],
+            [
+              "result",
+              "3"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 10,
+                "start": 1508503304890,
+                "end": 1508503304900
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟9｠ ｟-｠ ｟6｠",
+                "durationInMillis": 346,
+                "start": 1508503304901,
+                "end": 1508503305247
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟3｠",
+                "durationInMillis": 19,
+                "start": 1508503305248,
+                "end": 1508503305267
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "18"
+            ],
+            [
+              "operation",
+              "/"
+            ],
+            [
+              "number_2",
+              "3"
+            ],
+            [
+              "result",
+              "6"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 8,
+                "start": 1508503305269,
+                "end": 1508503305277
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟18｠ ｟/｠ ｟3｠",
+                "durationInMillis": 394,
+                "start": 1508503305278,
+                "end": 1508503305672
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟6｠",
+                "durationInMillis": 27,
+                "start": 1508503305673,
+                "end": 1508503305700
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "5"
+            ],
+            [
+              "operation",
+              "*"
+            ],
+            [
+              "number_2",
+              "3"
+            ],
+            [
+              "result",
+              "15"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 6,
+                "start": 1508503305702,
+                "end": 1508503305708
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟5｠ ｟*｠ ｟3｠",
+                "durationInMillis": 297,
+                "start": 1508503305709,
+                "end": 1508503306006
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟15｠",
+                "durationInMillis": 19,
+                "start": 1508503306007,
+                "end": 1508503306026
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "3"
+            ],
+            [
+              "operation",
+              "/"
+            ],
+            [
+              "number_2",
+              "0"
+            ],
+            [
+              "result",
+              "Infinity"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 6,
+                "start": 1508503306027,
+                "end": 1508503306033
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟3｠ ｟/｠ ｟0｠",
+                "durationInMillis": 306,
+                "start": 1508503306034,
+                "end": 1508503306340
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟Infinity｠",
+                "durationInMillis": 20,
+                "start": 1508503306341,
+                "end": 1508503306361
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "0"
+            ],
+            [
+              "operation",
+              "/"
+            ],
+            [
+              "number_2",
+              "0"
+            ],
+            [
+              "result",
+              "Error"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 12,
+                "start": 1508503306363,
+                "end": 1508503306375
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟0｠ ｟/｠ ｟0｠",
+                "durationInMillis": 268,
+                "start": 1508503306376,
+                "end": 1508503306644
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟Error｠",
+                "durationInMillis": 18,
+                "start": 1508503306645,
+                "end": 1508503306663
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        },
+        {
+          "parameters": [
+            [
+              "number_1",
+              "-10"
+            ],
+            [
+              "operation",
+              "+"
+            ],
+            [
+              "number_2",
+              "10"
+            ],
+            [
+              "result",
+              "0"
+            ]
+          ],
+          "givenStories": [],
+          "beforeSteps": {
+            "matches": []
+          },
+          "steps": {
+            "matches": [],
+            "results": [
+              {
+                "step": "Given a calculator",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Given a calculator",
+                "durationInMillis": 9,
+                "start": 1508503306664,
+                "end": 1508503306673
+              },
+              {
+                "step": "When do calculations <number_1> <operation> <number_2>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "When do calculations ｟-10｠ ｟+｠ ｟10｠",
+                "durationInMillis": 457,
+                "start": 1508503306673,
+                "end": 1508503307130
+              },
+              {
+                "step": "Then the answer is <result>",
+                "type": "SUCCESSFUL",
+                "parametrisedStep": "Then the answer is ｟0｠",
+                "durationInMillis": 19,
+                "start": 1508503307130,
+                "end": 1508503307149
+              }
+            ]
+          },
+          "afterSteps": {
+            "matches": []
+          },
+          "storyAndScenarioMeta": {
+            "properties": []
+          },
+          "scenario": {
+            "title": "calculator calculations",
+            "meta": {
+              "properties": []
+            },
+            "givenStories": {
+              "givenStories": [],
+              "givenStoriesAsString": "",
+              "examplesTable": {
+                "tableAsString": "",
+                "tableTransformers": {
+                  "transformers": [
+                    [
+                      "FORMATTING",
+                      {}
+                    ],
+                    [
+                      "REPLACING",
+                      {}
+                    ],
+                    [
+                      "FROM_LANDSCAPE",
+                      {}
+                    ]
+                  ]
+                },
+                "headers": [],
+                "data": [],
+                "properties": {
+                  "properties": [
+                    {
+                      "@name": "headerSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "valueSeparator",
+                      "@value": "|"
+                    },
+                    {
+                      "@name": "ignorableSeparator",
+                      "@value": "|--"
+                    }
+                  ]
+                },
+                "propertiesAsString": "",
+                "namedParameters": []
+              }
+            },
+            "examplesTable": {
+              "tableAsString": "|number_1|operation|number_2|result|\r\n|3|+|2|5|\r\n|9|-|6|3|\r\n|18|/|3|6|\r\n|5|*|3|15|\r\n|3|/|0|Infinity|\r\n|0|/|0|Error|\r\n|-10|+|10|0|",
+              "tableTransformers": {
+                "transformers": [
+                  [
+                    "FORMATTING",
+                    {}
+                  ],
+                  [
+                    "REPLACING",
+                    {}
+                  ],
+                  [
+                    "FROM_LANDSCAPE",
+                    {}
+                  ]
+                ]
+              },
+              "headers": [
+                "number_1",
+                "operation",
+                "number_2",
+                "result"
+              ],
+              "data": [
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "2"
+                  ],
+                  [
+                    "result",
+                    "5"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "9"
+                  ],
+                  [
+                    "operation",
+                    "-"
+                  ],
+                  [
+                    "number_2",
+                    "6"
+                  ],
+                  [
+                    "result",
+                    "3"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "18"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "6"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "5"
+                  ],
+                  [
+                    "operation",
+                    "*"
+                  ],
+                  [
+                    "number_2",
+                    "3"
+                  ],
+                  [
+                    "result",
+                    "15"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "3"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Infinity"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "0"
+                  ],
+                  [
+                    "operation",
+                    "/"
+                  ],
+                  [
+                    "number_2",
+                    "0"
+                  ],
+                  [
+                    "result",
+                    "Error"
+                  ]
+                ],
+                [
+                  [
+                    "number_1",
+                    "-10"
+                  ],
+                  [
+                    "operation",
+                    "+"
+                  ],
+                  [
+                    "number_2",
+                    "10"
+                  ],
+                  [
+                    "result",
+                    "0"
+                  ]
+                ]
+              ],
+              "properties": {
+                "properties": [
+                  {
+                    "@name": "headerSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "valueSeparator",
+                    "@value": "|"
+                  },
+                  {
+                    "@name": "ignorableSeparator",
+                    "@value": "|--"
+                  }
+                ]
+              },
+              "propertiesAsString": "",
+              "namedParameters": []
+            },
+            "steps": [
+              "Given a calculator",
+              "When do calculations <number_1> <operation> <number_2>",
+              "Then the answer is <result>"
+            ]
+          }
+        }
+      ],
+      "status": "SUCCESSFUL"
+    }
+  ]
+}}

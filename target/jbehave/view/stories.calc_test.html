@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>stories.calc_test</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1></h1>
+<div class="path">stories/calc_test.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">As a</span> mathematician</div>
+<div class="element asA"><span class="keyword asA">I want to</span> perform some math calculations</div>
+<div class="element iWantTo"><span class="keyword iWantTo">So that</span> I can get right answers</div>
+</div>
+<div class="scenario">
+<h2>Scenario: calculator calculations</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given a calculator</div>
+<div class="step">When do calculations &lt;number_1&gt; &lt;operation&gt; &lt;number_2&gt;</div>
+<div class="step">Then the answer is &lt;result&gt;</div>
+<table>
+<thead>
+<tr>
+<th>number_1</th><th>operation</th><th>number_2</th><th>result</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>3</td><td>+</td><td>2</td><td>5</td></tr>
+<tr>
+<td>9</td><td>-</td><td>6</td><td>3</td></tr>
+<tr>
+<td>18</td><td>/</td><td>3</td><td>6</td></tr>
+<tr>
+<td>5</td><td>*</td><td>3</td><td>15</td></tr>
+<tr>
+<td>3</td><td>/</td><td>0</td><td>Infinity</td></tr>
+<tr>
+<td>0</td><td>/</td><td>0</td><td>Error</td></tr>
+<tr>
+<td>-10</td><td>+</td><td>10</td><td>0</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {number_1=3, operation=+, number_2=2, result=5}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">3</span> <span class="step parameter">+</span> <span class="step parameter">2</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">5</span></div>
+
+<h3 class="example">Example: {number_1=9, operation=-, number_2=6, result=3}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">9</span> <span class="step parameter">-</span> <span class="step parameter">6</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">3</span></div>
+
+<h3 class="example">Example: {number_1=18, operation=/, number_2=3, result=6}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">18</span> <span class="step parameter">/</span> <span class="step parameter">3</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">6</span></div>
+
+<h3 class="example">Example: {number_1=5, operation=*, number_2=3, result=15}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">5</span> <span class="step parameter">*</span> <span class="step parameter">3</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">15</span></div>
+
+<h3 class="example">Example: {number_1=3, operation=/, number_2=0, result=Infinity}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">3</span> <span class="step parameter">/</span> <span class="step parameter">0</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">Infinity</span></div>
+
+<h3 class="example">Example: {number_1=0, operation=/, number_2=0, result=Error}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">0</span> <span class="step parameter">/</span> <span class="step parameter">0</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">Error</span></div>
+
+<h3 class="example">Example: {number_1=-10, operation=+, number_2=10, result=0}</h3>
+<div class="step successful">Given a calculator</div>
+<div class="step successful">When do calculations <span class="step parameter">-10</span> <span class="step parameter">+</span> <span class="step parameter">10</span></div>
+<div class="step successful">Then the answer is <span class="step parameter">0</span></div>
+</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
